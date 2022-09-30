@@ -1,0 +1,3 @@
+/Users/mihailevpatov/vim-prjs/game/udp-game-server/CMakeFiles/rebuild_cache.dir
+/Users/mihailevpatov/vim-prjs/game/udp-game-server/CMakeFiles/edit_cache.dir
+/Users/mihailevpatov/vim-prjs/game/udp-game-server/CMakeFiles/udp-game-server.dir
