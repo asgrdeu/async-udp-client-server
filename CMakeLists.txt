@@ -1,18 +1,18 @@
 cmake_minimum_required(VERSION 3.20)
-project(game VERSION 0.0.1)
+project(async-udp-client-server VERSION 0.0.1)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUERED True)
+set(CLI_PRJ_NAME async-udp-client)
+set(SRV_PRJ_NAME async-udp-server)
 
-set(Boost_INCLUDE_DIR /usr/local/Cellar/boost/include)
+set(EXECUTABLE_OUTPUT_PATH bin)
 
-#find_package(Boost COMPONENTS system filesystem REQUIRED)
+option(BUILD_CLI_PRJ "Enable building ${CLI_PRJ_NAME}" ON)
+option(BUILD_SRV_PRJ "Enable building ${CLI_PRJ_NAME}" ON)
 
-include_directories(${Boost_INCLUDE_DIR})
+if(BUILD_CLI_PRJ)
+    add_subdirectory(async-udp-client)
+endif()
 
-#add_subdirectory(src)
-
-add_executable(${PROJECT_NAME} ./connections/talk-to-client.cpp)
-
-#target_link_libraries( ${library_LIBRARIES})
-
+if(BUILD_SRV_PRJ)
+    add_subdirectory(async-udp-server)
+endif()
