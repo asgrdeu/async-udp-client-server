@@ -8,5 +8,5 @@ set(Boost_INCLUDE_DIR /usr/local/Cellar/boost/include)
 
 include_directories(${Boost_INCLUDE_DIR})
 
-add_executable(${PROJECT_NAME} ./connections/talk-to-client.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
